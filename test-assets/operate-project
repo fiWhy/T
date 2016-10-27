@@ -1,0 +1,11 @@
+1. unzip the project
+2. open project in IDE(we use webstorm)
+3. run command : npm start this will install all needed dependencies which you can see also in package.json, and will setup local server that will be opened at localhost:8080 to run debug.
+4. you can also use the command npm run buildwin to create dist folder which you can run the project from there.
+5. webpack create watch for the project files so when you update any file it will be rendering it immediately no need to restart project.
+6. notice to use project you need a valid environment with nodejs, and to not get error to setup IDE to ECMASCRIPT 6.
+
+
+7. i must say the test is not setting up the IDE so don't hesitate to call me or mail me: avihairing@tradency.com , +972 (0) 543260783.
+
+8. make sure to write comments keep indentation and build without breaking the architecture.

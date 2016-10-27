@@ -1,0 +1,19 @@
+<div layout="column" class="relative" layout-fill role="main">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h3>
+				Landing
+			</h3>
+			<span flex></span>
+			<md-button aria-label="Search" data-ui-sref="home.login">
+				Logout
+			</md-button>
+			<md-button aria-label="Open Settings" ng-click="landing.showTask($event)">
+				Show task
+			</md-button>
+			<md-button aria-label="Open Settings" ng-click="landing.showDevNotes($event)">
+				Show dev notes
+			</md-button>
+		</div>
+	</md-toolbar>
+<rates data-list="landing.RatesData.rates" data-handle-remove="landing.handleRemove(index)"></rates>

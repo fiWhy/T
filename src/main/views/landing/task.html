@@ -1,0 +1,72 @@
+<md-dialog aria-label="Mango (Fruit)">
+	<form ng-cloak>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>Task</h2>
+			</div>
+		</md-toolbar>
+
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				Hi this is a short test for building responsive rates feed and login form,<br> Welcome first of all let me say you can
+				contact me for query about any question or help, don't hesitate to call me or mail me: avihairing@tradency.com , 0543260783.Avihai
+				ring,
+				<br>
+				<br>
+				<b>please follow this instruction:</b><br>
+				<br> * in this skeleton project you have a basic understanding of our development convension and methods.<br> try to
+				use the same implentation with requiring(importing) needed services you build and using syntax correctly.<br>
+				<br>
+				<br>
+				<b>please replace this page with login popup with the next parametes:</b><br>
+				<br> * username<br> * password<br> * country - please notice there is a localization service(the service show you how
+				to use service implementation), which you can use to recognize the country automaticlly and show it in the form when
+				the popup opens(notice in the libs there is mapApi i have attached here)/ <b>or you can use any other library you like just make sure to wrap it in angular service</b>
+				<br> * phone number<br> * login button - please make sure after pressing login you will switch state you can see example
+				of state switching : you require the $scope in the requested controller(login popup controller)
+				<br>
+				<b>and then use the $state.go('name of state'). - you can see how to set up new state in landing.module.js for example(dont forget to inject route) :</b>
+				<br> $stateProvider
+				<br> .state('home.landing', {<br> url: '/landing',<br> template: template,<br> controller: 'LandingController',<br> controllerAs:
+				'landing'<br> });
+				<br>
+				<br> * after switching state to a new view(main page) you can see how view is build by looking at the landing folder(dont
+				forget to require the new view module in the home.module)
+				<br>
+				<b>you will get to empty view were you will need to build responsive table which show the next parameters:</b><br> ASK
+				/ BID / Instrument name - for example you can see in :<br>
+				<br>
+
+				<b>test-assets\ratesExample.png</b>
+
+				<br>
+				<br>
+				<b>* you can create any values you want with use of custom array the values you will use for each item :</b><br>
+				<br> ASK - number<br> BID - number<br> Instrument name - String<br>
+				<br><br> You can decide any number of rates to show(prefered it will be enought to be scrollable), values can be random(recommand
+				to have an helper that will create and modify numbers).
+
+				<b>*the values should change every second(you can use interval to do that) and the rules of the list should be as follow :</b><br>
+				<br> 1. when a price(number) larger then the previous price it turns green(the label)<br> 2. when a price(number) smaller
+				then the previous price it turns red(the label)<br> 3. when a price remains the same it truns(grey)<br> 4. when a price
+				is the same as the one before print the highest current price
+				<br>
+
+				<br>
+				<b>MAKE SURE RATES WILL BE USED AS DIRECTIVE AND BUILD THE DIRECTIVE MODULE EXPORT IN DIRECTIVES FOLDER SAME AS THE SERVICES</b>
+				<br><b>Pass attribtes into rate using directive controller attributes : '@' , '&', '='</b>
+				<br> Make sure to use rates model for setting and getting data
+				<br>
+
+				<br><b>Rates Behaviour:</b>
+				<br> 1. place x button to be able remove rate from list
+				<br> 2. place unput next to the X to change rate name
+
+
+				<b>** i have left assets folder for your styling, and compile with the help of webpack the styling when using npm start to run project or npm run buildwin to build project.</b>
+				<br> feel free to use scss or css and if you have issue with webpack feel free to load the css file directly inside app.html,
+				also notice that app.html after compiling will be the template for index.html.
+			</div>
+		</md-dialog-content>
+	</form>
+</md-dialog>

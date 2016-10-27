@@ -1,0 +1,74 @@
+<md-content data-layout="row" data-layout-align="center center" data-layout-fill data-layout-margin>
+
+	<md-whiteframe data-layout="column" data-layout-align="center center" data-flex data-flex-md="35" data-flex-lg="50" data-flex-gt-lg="33" class="md-whiteframe-z2"
+		layout-fill>
+
+		<md-toolbar class="md-primary" data-layout="column" data-layout-align="end" data-layout-fill>
+			<div data-layout="row" class="md-toolbar-tools md-toolbar-tools-bottom">
+				<h3 class="md-display-1">
+					Sign in
+				</h3>
+			</div>
+		</md-toolbar>
+
+		<div layout="column" data-layout-fill data-layout-margin data-layout-padding>
+			<form name="loginForm" data-layout="column" data-layout-fill data-layout-paddingdata- layout-margin>
+				<md-input-container>
+					<label>
+            Username
+          </label>
+					<input type="text" name="username" data-ng-model="login.UserData.username" data-aria-label="username" required/>
+					<md-toolbar data-ng-show="loginForm.username.$invalid &&  loginForm.username.$touched" class="md-warn" data-layout="row" data-layout-fill
+						data-layout-padding data-layout-margin>
+						<p class="md-body-1">This field cannot be empty!</p>
+					</md-toolbar>
+				</md-input-container>
+				<md-input-container>
+					<label>
+            Password
+          </label>
+					<input type="password" name="password" data-ng-model="login.UserData.password" data-aria-label="password" required/>
+					<md-toolbar ng-show="loginForm.password.$invalid &&  loginForm.password.$touched" class="md-warn" data-layout="row" data-layout-fill
+						data-layout-padding data-layout-margin>
+						<p class="md-body-1">This field cannot be empty!</p>
+					</md-toolbar>
+				</md-input-container>
+				<md-input-container>
+					<label>
+            Country
+          </label>
+					<input type="text" name="address" data-ng-model="login.UserData.address" data-ng-disabled="login.countrySearching" data-aria-label="country" required/>
+					<choose-country  data-country-will-be-found="login.countryWillBeFound(promise);" 
+												data-with-dialog="true" 
+												data-country-selected="login.countrySelected(country)">
+                    <md-button class="md-raised md-primary" data-ng-click="login.autodetectLocation()" data-ng-disabled="login.countrySearching">
+						Autodetect country
+					</md-button>
+					</choose-country>
+					<md-toolbar data-ng-show="loginForm.address.$invalid &&  loginForm.address.$touched" class="md-warn" data-layout="row" data-layout-fill
+						data-layout-padding data-layout-margin>
+						<p class="md-body-1">This field cannot be empty!</p>
+					</md-toolbar>
+				</md-input-container>
+
+                
+				<md-input-container>
+					<label>
+            Phone number
+          </label>
+					<input type="text" name="phone" data-ng-model="login.UserData.phone" data-aria-label="phone" required/>
+					<md-toolbar data-ng-show="loginForm.phone.$invalid &&  loginForm.phone.$touched" class="md-warn" data-layout="row" data-layout-fill data-layout-padding
+						data-layout-margin>
+						<p class="md-body-1">Please, check your phone number!</p>
+					</md-toolbar>
+				</md-input-container>
+				<div layout="row" data-layout-align="space-between center">
+					<md-button type="submit" class="md-raised md-primary"  data-ng-click="login.handleFormSubmit()" data-aria-label="login" data-ng-disabled="loginForm.$invalid || !login.checkLoginForm()">
+						Sign In
+					</md-button>
+				</div>
+			</form>
+		</div>
+
+	</md-whiteframe>
+</md-content>

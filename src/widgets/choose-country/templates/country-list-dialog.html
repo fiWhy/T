@@ -1,0 +1,22 @@
+<md-dialog aria-label="Mango (Fruit)">
+	<form ng-cloak>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>Countries</h2>
+				<span flex></span>
+				<md-button data-ng-click="dialog.cancel()">
+					Close
+				</md-button>
+			</div>
+		</md-toolbar>
+
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<ul>
+					<li data-ng-repeat="country in countries" data-ng-click="dialog.answer(country)" data-ng-bind="country.formatted_address"
+						class="noright md-clickable country-item"></li>
+				</ul>
+			</div>
+		</md-dialog-content>
+	</form>
+</md-dialog>
