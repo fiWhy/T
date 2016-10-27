@@ -2,7 +2,7 @@ import faker from 'faker';
 import devNotes from './dev-notes.html';
 import task from './task.html';
 export class LandingController {
-    static $inject = ['LocalizationService', 'UserData', 'RatesData', '$scope', 'RatesService', '$interval', '$mdDialog'];
+    static $inject = ['LocalizationService', 'UserData', 'RatesData', '$scope', 'RatesService', '$interval', '$mdDialog', '$state'];
     constructor(
         LocalizationService,
         UserData,
@@ -10,7 +10,8 @@ export class LandingController {
         $scope,
         RatesService,
         $interval,
-        $mdDialog
+        $mdDialog,
+        $state
     ) {
         this.LocalizationService = LocalizationService;
         this.UserData = UserData;
@@ -19,6 +20,7 @@ export class LandingController {
         this.RatesService = RatesService;
         this.$interval = $interval;
         this.$mdDialog = $mdDialog;
+        this.$state = $state;
 
         const fields = {
             image: faker.image.avatar,
@@ -33,6 +35,11 @@ export class LandingController {
                 this.RatesData.pushRates(data);
                 this.startTimer(1000);
             });
+    }
+
+    logout() {
+        this.UserData.clear();
+        this.$state.go('home.login');
     }
 
     handleRemove(index) {

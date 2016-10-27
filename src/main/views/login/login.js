@@ -27,7 +27,14 @@ export class LoginController {
     }
 
     checkLoginForm() {
-        return true;
+        if(this.UserData.username
+            && this.UserData.password
+            && this.UserData.address
+            && this.UserData.phone) {
+                return true;
+            }
+
+            return false;
     }
 
 

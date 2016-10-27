@@ -1,7 +1,6 @@
 export class UserData{
     constructor(){
-        this.address = '';
-        this.mapAddress = {};
+        this.clear();
     }
 
     getCountry(){
@@ -14,5 +13,14 @@ export class UserData{
 
     getAddress(){
         return this.mapAddress;
+    }
+
+    clear() {
+        this.address = '';
+        this.username = '';
+        this.country = '';
+        this.password = '';
+        this.phone = '';
+        this.mapAddress = {};
     }
 }

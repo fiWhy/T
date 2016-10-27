@@ -34,7 +34,7 @@ export class Rate {
     update(newData) {
         this.oldBidValue = this.newBidValue;
         this.newBidValue = newData.bid;
-        this.bestBidValue = this.calculateBest(newData.bid);
+        this.bestBidValue = this.calculateBest(this.bestAskValue, newData.bid);
 
 
         this.oldAskValue = this.newAskValue;

@@ -8,15 +8,29 @@
 
 		<md-dialog-content>
 			<div class="md-dialog-content">
-                <p>
-                    I have some questions about application design in this way. I disagree with some ways of your code implementation.
-                </p>
+				<h3>Features</h3>
 				<p>
-                        I'm sorry for bad markup, but i didn't want to implement bootstrap here, because u already have a materialize library.
-                    </p>
+					I have some questions about application design in this way. I disagree with some ways of your code implementation.
+				</p>
+				<h3>Implementation</h3>
 				<p>
-                        And i don't have a lot of experience of using materialize =(
-                    </p>
+					<ul>
+						<li>I added $inject static method for clear di </li>
+						<li>I created login module - because, i think, it is not a best practice to inject login logic in main base controller</li>
+						<li>In widgets i added "templates" folder to part the login</li>
+						<li>And some other changes... Not so significant. I think it makes sense to discuss the architecture</li>
+						<li>In behaviour item - i didn't understand what means "place unput next" and what rate name shold be changed.<br>
+							<span class="red">I started developing late, because of the circumstances so that I do not see any sense to bother you so late</span>
+						</li>
+					</ul>
+				</p>
+				<h3>Issues</h3>
+				<p>
+					I'm sorry for bad markup, but i didn't want to implement bootstrap here, because u already have a materialize library.
+				</p>
+				<p>
+					And i don't have a lot of experience of using materialize =( . My bad.
+				</p>
 			</div>
 		</md-dialog-content>
 	</form>
